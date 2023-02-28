@@ -1,4 +1,4 @@
-import React from "react";
+import { React, useState } from "react";
 import "devextreme/dist/css/dx.carmine.css";
 import {
   TaiFactoryContextProvider,
@@ -13,12 +13,13 @@ import {
 import "./App.css";
 import Header from "./components/Header";
 import MachineGrid from "./components/MachineGrid";
-import MachineCard from "./components/MachineCard";
-// import LoadingView from "./components/LoadingView";
+import MachineProductionCard from "./components/MachineProductionCard";
+import MachineMonitorCard from "./components/MachineMonitorCard";
 
 const App = () => {
   return (
     <div className="app">
+      <div class="loader"></div>
       <TaiFactoryContextProvider>
         <DepartmentRouter />
       </TaiFactoryContextProvider>
@@ -27,20 +28,33 @@ const App = () => {
 };
 
 const DepartmentRouter = () => {
+  const [cardsView, setCardsView] = useState(1);
+
   return (
     <Router>
-      <Header />
+      <Header action={setCardsView} />
+
       <Switch>
-        <Route path="/home" render={(props) => <AllMachines {...props} />} />
-        <Route path="/:id" render={(props) => <MachineGrid {...props} />} />
+        <Route
+          path="/home"
+          render={(props) => <AllMachines {...props} changeView={cardsView} />}
+        />
+        <Route
+          path="/:id"
+          render={(props) => <MachineGrid {...props} cardsView={cardsView} />}
+        />
         <Redirect to="/home" />
       </Switch>
     </Router>
   );
 };
 
-const AllMachines = () => {
+const AllMachines = ({ changeView }) => {
   const departments = useTaiFactoryContext() || [];
+
+  const SelectedView =
+    changeView === 1 ? MachineProductionCard : MachineMonitorCard;
+
   const workunits = departments
     .map((department) =>
       department.workunits.map((workunit) => ({
@@ -52,10 +66,9 @@ const AllMachines = () => {
 
   return (
     <div className="card-rows">
-      {/* {LoadingView} */}
       {workunits.map((machine, index) => {
         return (
-          <MachineCard
+          <SelectedView
             key={`machine${index}`}
             machine={machine}
             number={index + 1}

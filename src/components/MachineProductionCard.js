@@ -18,7 +18,7 @@ const configStatusColor = {
   Orange: "#FFBD33",
 };
 
-function MachineCard({ machine, number }) {
+function MachineProductionCard({ machine, number }) {
   return (
     <div className="machine-card">
       <Box direction="col" width="100%" height={450}>
@@ -150,4 +150,4 @@ function MachineCard({ machine, number }) {
   );
 }
 
-export default MachineCard;
+export default MachineProductionCard;
