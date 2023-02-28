@@ -18,10 +18,10 @@ function MachineMonitorCard({ machine }) {
       className="dx-card"
       style={{ backgroundColor: configStatusColor[machine.sitcolor] }}
     >
-      <div className="dx-fieldset">
-        <div className="dx-fieldset-header">{machine.matcodecons}</div>
+      <div className="dx-fieldset-header">{machine.matcodecons}</div>
 
-        <div>{machine.matcode}</div>
+      <div className="monitor_card_row_2">
+        <div> {machine.matcode} </div>
         <div>{MachineStatus}</div>
       </div>
     </div>
