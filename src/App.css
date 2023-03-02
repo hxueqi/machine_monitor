@@ -4,17 +4,36 @@
   justify-content: center;
   align-items: center;
   width: 100%;
-  max-width: 920px;
   margin: 0 auto;
-  min-width: 300px;
+  min-width: 320px;
 }
 
 .header {
   display: flex;
-  width: 100%;
-  align-items: center;
   justify-content: space-between;
-  border-color: orange;
+  align-items: center;
+  width: calc(100% - 40px);
+  height: 60px;
+  padding: 0 20px;
+  border-bottom: 1px solid #cccccc;
+}
+
+.logo {
+  background-image: url("/src/images/company_logo.png");
+  background-repeat: no-repeat;
+  height: 60px;
+  background-position: left;
+  background-size: 140px;
+  width: 100%;
+  overflow: hidden;
+}
+
+.logo img {
+  margin: 0 auto;
+}
+
+.select-view {
+  min-width: 100px;
 }
 
 img {
@@ -26,11 +45,6 @@ img {
 .department_menu {
   width: 50px;
   height: 50px;
-}
-
-.header_right {
-  display: flex;
-  gap: ThreeUnits;
 }
 
 .toolbar {
@@ -59,6 +73,7 @@ img {
   margin: 10px;
   width: calc(33% - 40px);
   min-width: 250px;
+  max-width: 300px;
   text-align: center;
 }
 
@@ -93,27 +108,39 @@ img {
   text-overflow: ellipsis;
 }
 
-.dx-card {
-  box-shadow: 1px 1px 4px #ccc;
-  border-inline-start-width: 16px;
-  border-radius: 5px;
+.monitor-card {
+  box-shadow: 3px 3px 4px #ccc;
   padding: 10px;
   margin: 10px;
-  /* width: calc(33% - 40px); */
   min-width: 240px;
   text-align: center;
-  border-bottom: solid;
+  border-radius: 0.5em;
+  border: 1px solid #fff;
+  border-width: 1px 1px 1px 16px;
+  color: #fff;
 }
 
-.dx-fieldset-header {
+.monitor-header {
   text-align: center;
 }
 
-.monitor_card_row_2 {
+.monitor-card-row {
   display: flex;
   flex-direction: row;
   justify-content: center;
 
   align-items: center;
   gap: 5px;
+}
+
+.content-container {
+  min-height: 300px;
+}
+
+.dx-box-item-content {
+  justify-content: center;
+}
+
+.dx-drawer-wrapper {
+  min-height: 400px;
 }

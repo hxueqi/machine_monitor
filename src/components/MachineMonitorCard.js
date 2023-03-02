@@ -1,28 +1,22 @@
-import React from "react";
-import { Box } from "devextreme-react";
-import { Item } from "devextreme-react/box";
+import React from 'react';
+import { configBackgroundColor, configBorderColor } from './utils/configColors';
 
-function MachineMonitorCard({ machine }) {
-  const configStatusColor = {
-    YellowGreen: "#8FD31F",
-    Green: "#12781D",
-    Red: "#DB0C0C",
-    Orange: "#FFBD33",
-  };
+const isActivated = (sitcolor) => (sitcolor === 'Green' ? 'ACTIVE' : 'INACTIVE');
 
-  const MachineStatus =
-    configStatusColor[machine.sitcolor] === "#12781D" ? "ACTIVE" : "INACTIVE";
-
+function MachineMonitorCard({ machine } = {}) {
+  const { sitcolor, matcodecons, matcode } = machine || {};
   return (
     <div
-      className="dx-card"
-      style={{ backgroundColor: configStatusColor[machine.sitcolor] }}
+      className="monitor-card"
+      style={{
+        backgroundColor: configBackgroundColor[sitcolor],
+        borderColor: configBorderColor[sitcolor],
+      }}
     >
-      <div className="dx-fieldset-header">{machine.matcodecons}</div>
-
-      <div className="monitor_card_row_2">
-        <div> {machine.matcode} </div>
-        <div>{MachineStatus}</div>
+      <div className="monitor-header">{matcodecons}</div>
+      <div className="monitor-card-row">
+        <div>{matcode}</div>
+        <div>{isActivated(sitcolor)}</div>
       </div>
     </div>
   );

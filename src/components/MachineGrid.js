@@ -1,28 +1,11 @@
-import React from "react";
-import MachineProductionCard from "./MachineProductionCard";
-import MachineMonitorCard from "./MachineMonitorCard";
-import { useParams } from "react-router-dom";
-import useWorkUnitsByDepartment from "../hooks/useDepartmentByCode";
+import React from 'react';
+import CardRow from './CardRow';
+import useWorkUnits from '../hooks/useWorkUnits';
 
-const MachineGrid = ({ cardsView }) => {
-  const { id } = useParams();
-  const workunits = useWorkUnitsByDepartment(id);
-  const SelectedView =
-    cardsView === 1 ? MachineProductionCard : MachineMonitorCard;
+function MachineGrid({ cardsView }) {
+  const workunits = useWorkUnits();
 
-  return (
-    <div className="card-rows">
-      {workunits.map((machine, index) => {
-        return (
-          <SelectedView
-            key={`machine${index}`}
-            machine={machine}
-            number={index + 1}
-          />
-        );
-      })}
-    </div>
-  );
-};
+  return (<CardRow workunits={workunits} cardsView={cardsView} />);
+}
 
 export default MachineGrid;
