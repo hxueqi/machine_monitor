@@ -1,70 +1,101 @@
-# Getting Started with Create React App
+<br/>
+<p align="center">
+  <h3 align="center">Machine monitor</h3>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+  <p align="center">
+    A simple APP can watching your machine's status
+    <br/>
+    <br/>
+    <a href="https://github.com/hxueqi/machine_monitor.git"><strong>Explore the docs »</strong></a>
+    <br/>
+    <br/>
+  </p>
+</p>
 
-## Available Scripts
+## Table Of Contents
 
-In the project directory, you can run:
+- [About the Project](#about-the-project)
+- [Built With](#built-with)
+- [Getting Started](#getting-started)
+- [Usage](#usage)
+- [Future version project](#Future version project)
+- [Authors](#authors)
+- [Acknowledgements](#acknowledgements)
 
-### `npm start`
+## About The Project
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+![Screen Shot](images/machine_production.png,images/machine_monitor.png)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Upon accessing the website, users can view a comprehensive list of all departments and their corresponding machine production. To access all machine monitors, users can select the menu located in the top right corner of the page. Furthermore, users can choose to view a specific department's machines by selecting the hamburger button in the top left corner of the page. Finally, clicking on the company logo will redirect users to the homepage where they can view all machine production for all departments.
 
-### `npm test`
+Here's why:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- You can watching all machine's status
+- You can watch each department's status
 
-### `npm run build`
+A list of commonly used resources that I find helpful are listed in the acknowledgements.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Built With
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+This project is created by ReactJS, CSS, Jest, ESLint
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Getting Started
 
-### `npm run eject`
+Clone down this repository. You will need node and npm installed globally on your machine.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Installation:
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+npm install
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+To Run Test Suite:
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+npm test
 
-## Learn More
+To Start Server:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+npm start
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+To Visit App:
 
-### Code Splitting
+localhost:3000/
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## Usage
 
-### Analyzing the Bundle Size
+Upon accessing the website, users can view a comprehensive list of all departments and their corresponding machine production. To access all machine monitors, users can select the menu located in the top right corner of the page. Furthermore, users can choose to view a specific department's machines by selecting the hamburger button in the top left corner of the page. Finally, clicking on the company logo will redirect users to the homepage where they can view all machine production for all departments.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+_For more examples, please refer to the [Documentation](https://example.com)_
 
-### Making a Progressive Web App
+## Future version project
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+- Authentication
+- Autorefresh check box
+- Add test for every component
+- Do end to end test with Cypress
+- Use Husky for commit configuration and to launch validations
 
-### Advanced Configuration
+## Contributing
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+Contributions are what make the open source community such an amazing place to be learn, inspire, and create. Any contributions you make are **greatly appreciated**.
 
-### Deployment
+- If you have suggestions for adding or removing projects, feel free to [open an issue](https://github.com/Xueqi/ReadME-machine_monitor/issues/new) to discuss it, or directly create a pull request after you edit the _README.md_ file with necessary changes.
+- Please make sure you check your spelling and grammar.
+- Create individual PR for each suggestion.
+- Please also read through the [Code Of Conduct](https://github.com/Xueqi/ReadME-machine_monitor/blob/main/CODE_OF_CONDUCT.md) before posting your first idea as well.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+### Creating A Pull Request
 
-### `npm run build` fails to minify
+1. Fork the Project
+2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the Branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Authors
+
+- **Xueqi Huang** - _FullstackDev_ - [Xueqi](https://github.com/hxueqi) -
+
+## Acknowledgements
+
+- [React](https://reactjs.org/)
+- [Jest](https://jestjs.io/)
+- [Eslint](https://eslint.org/)
