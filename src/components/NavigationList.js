@@ -11,7 +11,7 @@ const configIcon = {
   REB: 'chevrondoubleright',
 };
 
-function NavigationList() {
+function NavigationList({ setOpenDraw }) {
   const departments = useTaiFactoryContext() || [];
   const history = useHistory();
   const options = departments
@@ -24,6 +24,7 @@ function NavigationList() {
 
   const onItemClick = ({ itemIndex }) => {
     history.push(`/${options[itemIndex].id}`);
+    setOpenDraw(false);
   };
   return (
     <div className="list" style={{ width: '200px' }}>

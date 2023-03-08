@@ -16,7 +16,7 @@ const getDepartments = () => fetch('http://intranet.taionline.net:14036/api/load
 })
   .then((response) => response.json())
   .catch((error) => {
-    console.log(`An error occured${error}`);
+    throw new Error(error);
   });
 
 export default getDepartments;
