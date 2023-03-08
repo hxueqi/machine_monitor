@@ -24,7 +24,7 @@
 
 ## About The Project
 
-![Screen Shot](/Users/tt/Desktop/machine_monitor/machine_monitor/public/app_overview.png)
+![Screen Shot](public/app_overview.png)
 
 Upon accessing the website, users can view a comprehensive list of all departments and their corresponding machine production. To access all machine monitors, users can select the menu located in the top right corner of the page. Furthermore, users can choose to view a specific department's machines by selecting the hamburger button in the top left corner of the page. Finally, clicking on the company logo will redirect users to the homepage where they can view all machine production for all departments.
 
