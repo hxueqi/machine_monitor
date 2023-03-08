@@ -5,11 +5,7 @@ import {
 } from './providers/TaiFactoryProvider';
 import './App.css';
 import DepartmentRouter from './components/DepartementRouter';
-} from './providers/TaiFactoryProvider';
-import './App.css';
-import DepartmentRouter from './components/DepartementRouter';
 
-function App() {
 function App() {
   return (
     <div className="app">
